@@ -1,0 +1,57 @@
+<div class="body">
+  <input
+    [(ngModel)]="value"
+    type="text"
+    (keyup.enter)="addTodo($event.target.value)"
+  />
+  <!-- <input (keyup.enter)="addTodo($event.target.value)" /> -->
+  <button (click)="addTodo(value)">Add Todo</button>
+</div>
+
+<div class="sub-div">
+  <div>
+    <h2>All Todos</h2>
+    <ul *ngFor="let list of lists">
+      <li style="display: flex;">
+        {{ list.todo }}
+        <div>
+          <button (click)="moveToPending(list.todo)" class="pending">
+            Pending
+          </button>
+          <button
+            (click)="moveToDone(list.todo)"
+            style="height: 30px;"
+            class="done"
+          >
+            Done
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h2>Pending Todos</h2>
+    <ul *ngFor="let item of pending">
+      <li>{{ item.todo }}
+     <!--<div>
+      <button (click)="moveToReset(list.todo)" class="Reset">
+        Reset
+      </button>
+      <button (click)="moveToDelete(list.todo)" class="Delete">
+        Delete
+      </button>
+      <button (click)="moveToDone(list.todo)" class="PendingDone">
+        Done
+      </button>
+      </div>-->
+      </div>
+    </li>
+    </ul>
+  </div>
+  <div>
+    <h2>Done Todos</h2>
+    <ul>
+      <li>Learn Angular</li>
+    </ul>
+  </div>
+</div>

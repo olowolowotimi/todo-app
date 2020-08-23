@@ -1,0 +1,48 @@
+.body {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background: black;
+  padding: 20px;
+}
+input {
+  width: 60%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+button {
+  background: chartreuse;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.sub-div {
+  background: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+.sub-div div:nth-child(odd) {
+  margin: 0 50px;
+}
+/*.pending {
+  height: 30px;
+  background: yellow;
+  margin: 0 10px;
+}
+.Reset{
+  height: 30px;
+  background: blue;
+  margin: 0 10px;
+}
+.Delete{
+  height: 30px;
+  background: red;
+  margin: 0 10px;
+}*/
