@@ -31,7 +31,7 @@ button {
 .sub-div div:nth-child(odd) {
   margin: 0 50px;
 }
-/*.pending {
+.pending {
   height: 30px;
   background: yellow;
   margin: 0 10px;
@@ -45,4 +45,9 @@ button {
   height: 30px;
   background: red;
   margin: 0 10px;
-}*/
+}
+.Done{
+  height: 30px;
+  background: pink;
+  margin: 0 10px;
+}

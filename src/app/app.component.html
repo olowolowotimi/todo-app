@@ -33,25 +33,31 @@
     <h2>Pending Todos</h2>
     <ul *ngFor="let item of pending">
       <li>{{ item.todo }}
-     <!--<div>
-      <button (click)="moveToReset(list.todo)" class="Reset">
+     <div>
+      <button (click)="moveToReset(item.todo)" class="Reset">
         Reset
       </button>
-      <button (click)="moveToDelete(list.todo)" class="Delete">
+      <button (click)="moveToDelete(item.todo)" class="Delete">
         Delete
       </button>
-      <button (click)="moveToDone(list.todo)" class="PendingDone">
+      <button (click)="moveToDone(item.todo)" class="PendingDone">
         Done
       </button>
-      </div>-->
       </div>
+      <!--</div>-->
     </li>
     </ul>
   </div>
   <div>
     <h2>Done Todos</h2>
-    <ul>
-      <li>Learn Angular</li>
+    <ul ngFor="let item of done">
+      <li>{{ item.todo }}
+        <div>
+          <button (click)="moveToDelete(item.todo)" class="Delete">
+            Delete
+          </button>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
